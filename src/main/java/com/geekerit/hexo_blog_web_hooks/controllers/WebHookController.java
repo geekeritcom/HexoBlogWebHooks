@@ -19,6 +19,11 @@ public class WebHookController {
 
     private static final String BASH = "/bin/bash";
     private static final String TO_PARAM = "-c";
+    /**
+     * <b>[Note]</b>
+     * <p>1.git required set ssh_key otherwise need login github account after exec git pull command</p>
+     * <p>2.replace dir path with yours github repository on your container</p>
+     */
     private static final String CHANGE_DIR = "git -C /root/blog_sources/HexoBlog/ pull";
     private static final String[] COMMAND_ARRAY = new String[3];
 
